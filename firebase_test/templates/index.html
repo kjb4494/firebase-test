@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block head %}
+    <script>
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+        ui.start('#firebaseui-auth-container', {
+            signInSuccessUrl: '/',
+            signInOptions: [
+                firebase.auth.EmailAuthProvider.PROVIDER_ID,
+                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+                firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+                firebase.auth.GithubAuthProvider.PROVIDER_ID,
+                firebase.auth.PhoneAuthProvider.PROVIDER_ID
+            ],
+        });
+    </script>
+{% endblock head %}
+
+{% block content %}
+    <script>
+        var user = firebase.auth().currentUser;
+        console.log(user);
+        if (user) {
+
+        } else {
+            var login_container = document.createElement('div');
+            login_container.id = 'firebaseui-auth-container';
+            document.body.appendChild(login_container)
+        }
+    </script>
+{% endblock content %}}

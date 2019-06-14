@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>smauth</title>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#config-web-app -->
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDaQyq5el3ihEXCAZALp1vRkLCIXZR3qCk",
+            authDomain: "hsgcp-777.firebaseapp.com",
+            databaseURL: "https://hsgcp-777.firebaseio.com",
+            projectId: "hsgcp-777",
+            storageBucket: "hsgcp-777.appspot.com",
+            messagingSenderId: "687482487549",
+            appId: "1:687482487549:web:20cd5e92da53602f"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    {% block head %}
+    {% endblock head %}
+</head>
+<body>
+    <h1>Firebase Web Test</h1>
+    <hr>
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>
